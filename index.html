@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
 <body>
@@ -49,10 +49,10 @@
     <div class="main">
         <div class="head">
             <div class="col-div-6">
-                <span class="nav" style="font-size: 30px; cursor: pointer; color: red;">
+                <span class="nav" style="font-size: 30px; cursor: pointer; color: white;">
                     &#9776;Dashboard
                 </span>
-                <span class="nav2" style="font-size: 30px; cursor: pointer; color: red;">
+                <span class="nav2" style="font-size: 30px; cursor: pointer; color: rgb(255, 255, 255);">
                     &#9776;Dashboard
                 </span>
             </div>
@@ -72,8 +72,8 @@
                 <p>
                     1342 <br>
                     <span>Customers</span>
-                    <i class="fa fa-users box-icon"></i>
-                </p>
+               </p>
+               <i class="fa fa-users box-icon"></i>
             </div>
         </div>
         <div class="col-div-3">
@@ -81,8 +81,8 @@
                 <p>
                     3043 <br>
                     <span>Projects</span>
-                    <i class="fa fa-list box-icon"></i>
                 </p>
+                <i class="fa fa-list box-icon"></i>
             </div>
         </div>
         <div class="col-div-3">
@@ -90,8 +90,8 @@
                 <p>
                     2123 <br>
                     <span>Orders</span>
-                    <i class="fa fa-shopping-bag box-icon"></i>
                 </p>
+                <i class="fa fa-shopping-bag box-icon"></i>
             </div>
         </div>
         <div class="col-div-3">
@@ -99,8 +99,8 @@
                 <p>
                     11 <br>
                     <span>Tasks</span>
-                    <i class="fa fa-tasks box-icon"></i>
                 </p>
+                <i class="fa fa-tasks box-icon"></i>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -146,13 +146,15 @@
                 <div class="content-box">
                     <p>Total Sale <span>Sell All</span></p>
                     <div class="circle-wrap">
-                        <div class="mask-full">
-                            <div class="fill"></div>
+                        <div class="circle">
+                            <div class="mask full">
+                                 <div class="fill"></div>
+                            </div>
+                            <div class="mask half">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="inside-circle">75%</div>
                         </div>
-                        <div class="mask-half">
-                            <div class="fill"></div>
-                        </div>
-                        <div class="inside-circle">75%</div>
                     </div>
                 </div>
             </div>
@@ -166,6 +168,31 @@
     <script>
         $(".nav").click( () => {
             console.log('diste click')
+            $("#mySidenav").css('width', '70px')
+            $(".main").css('margin-left', '70px')
+            $(".logo").css('visibility', 'hidden')
+            $(".logo span").css('visibility', 'visible')
+            $(".logo span").css('margin-left', '-10px')
+            $(".icon-a").css('visibility', 'hidden')
+            $(".icons").css('visibility', 'visible')
+            $(".icons").css('margin-left', '-10px')
+            $(".nav").css('display', 'none')
+            $(".nav2").css('display', 'block')
+        })
+
+        $(".nav2").click( () => {
+            console.log('diste click')
+            $("#mySidenav").css('width', '300px')
+            $(".main").css('margin-left', '300px')
+            $(".logo").css('visibility', 'visible')
+            $(".logo span").css('visibility', 'visible')
+            $(".logo span").css('margin-left', '0px')
+            $(".icon-a").css('visibility', 'visible')
+            $(".icon-a").css('margin-left', '10px')
+            $(".icons").css('visibility', 'visible')
+            $(".icons").css('marging-left', '0px')
+            $(".nav").css('display', 'block')
+            $(".nav2").css('display', 'none')
         })
     </script>
 </body>
