@@ -16,6 +16,7 @@ body {
     font-weight: bold;
     color: white;
     margin-bottom: 30px; 
+    font-size: 30px;
 }
 
 .logo span{
@@ -41,7 +42,7 @@ body {
     font-size: 20px;
     display: block;
     transition: .5s;
-    padding: 15px 8px 15px 32px; //#arriba abajo izquierda derecha#//
+    padding: 15px 8px 15px 32px; /*arriba abajo izquierda derecha*/
 }
 
 .sidenav a:hover{
@@ -222,7 +223,6 @@ tr:last-child td{
     animation: fill ease-in-out 3s;
     transform: rotate(150deg);
 }
-
 @keyframes fill {
     0%{
         transform: rotate(0deg);
